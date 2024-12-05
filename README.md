@@ -2,6 +2,8 @@
 
 A lightweight state management approach for Flutter that provides the benefits of unidirectional data flow without the complexity of BLoC.
 
+[Try The Live Web Sample](https://nimblesite.github.io/simplified_unidirectional_dataflow/)
+
 [Read the full technical documentation](simplified-unidirectional-data-flow.md)
 
 ## Overview
