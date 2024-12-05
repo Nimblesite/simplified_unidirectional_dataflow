@@ -31,7 +31,7 @@ jobs:
 
       - name: Build WASM
         run: |
-          flutter build web --wasm --base-href "/"
+          flutter build web --wasm --base-href "/simplified_unidirectional_dataflow/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
