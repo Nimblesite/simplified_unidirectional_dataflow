@@ -1,11 +1,11 @@
 {
-    "name": "simplified_unidirectional_dataflow",
-    "short_name": "simplified_unidirectional_dataflow",
+    "name": "Simplified Unidirectional Data Flow",
+    "short_name": "SUDF",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "A simple example of a unidirectional data flow in a web application with wasm.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
