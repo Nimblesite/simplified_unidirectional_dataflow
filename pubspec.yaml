@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   http: ^1.2.2
   ioc_container: ^1.0.12
+  url_launcher: ^6.2.5
 
 dev_dependencies:
   austerity: ^1.2.0

@@ -9,6 +9,7 @@ import 'package:simplified_unidirectional_dataflow/models/post.dart';
 import 'package:simplified_unidirectional_dataflow/ui/constants.dart';
 import 'package:simplified_unidirectional_dataflow/ui/info_card.dart';
 import 'package:simplified_unidirectional_dataflow/ui/post_card.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const pageCountKey = ValueKey('PageInfoCard');
 const postCountKey = ValueKey('PostsInfoCard');
@@ -27,6 +28,15 @@ class HomePage extends StatelessWidget {
                 ),
           ),
           centerTitle: true,
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.info_outline),
+              tooltip: 'Learn more about SUDF',
+              onPressed: _launchWebsite,
+              color: Theme.of(context).colorScheme.onPrimary,
+            ),
+            const SizedBox(width: 8),
+          ],
         ),
         body: ValueListenableBuilder<AppState>(
           valueListenable: container<AppController>(),
@@ -170,4 +180,11 @@ class HomePage extends StatelessWidget {
           child: const Icon(Icons.refresh),
         ),
       );
+
+  Future<void> _launchWebsite() async {
+    const url = 'https://www.nimblesite.co/simplified-unidirectional-data-flow/';
+    if (!await launchUrl(Uri.parse(url))) {
+      debugPrint('Could not launch $url');
+    }
+  }
 }
