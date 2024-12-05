@@ -13,7 +13,6 @@ class InfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Card(
-        color: Theme.of(context).colorScheme.primaryContainer,
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: Spacing.lg,

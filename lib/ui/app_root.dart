@@ -12,7 +12,7 @@ class AppRoot extends StatelessWidget {
         title: appTitle,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(255, 147, 200, 200),
+            seedColor: const Color.fromARGB(255, 147, 8, 73),
             brightness: Theme.of(context).brightness,
           ),
           useMaterial3: true,

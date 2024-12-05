@@ -19,31 +19,18 @@ class PostCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Theme.of(context).colorScheme.primaryContainer,
-                Theme.of(context).colorScheme.primaryContainer.withOpacity(0.8),
-              ],
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _buildHeader(context),
-                const Divider(height: 24),
-                _buildTitle(context),
-                const SizedBox(height: 12),
-                _buildBody(context),
-                const SizedBox(height: 4),
-              ],
-            ),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildHeader(context),
+              const Divider(height: 24),
+              _buildTitle(context),
+              const SizedBox(height: 12),
+              _buildBody(context),
+              const SizedBox(height: 4),
+            ],
           ),
         ),
       );
@@ -90,7 +77,6 @@ class PostCard extends StatelessWidget {
               vertical: 6,
             ),
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.secondary.withOpacity(0.1),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Text(

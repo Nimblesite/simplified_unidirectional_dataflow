@@ -19,6 +19,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.secondary,
           title: Text(
             appTitle,
             style: Theme.of(context).textTheme.headlineMedium!.copyWith(
@@ -26,7 +27,6 @@ class HomePage extends StatelessWidget {
                 ),
           ),
           centerTitle: true,
-          backgroundColor: Theme.of(context).colorScheme.primary,
         ),
         body: ValueListenableBuilder<AppState>(
           valueListenable: container<AppController>(),
@@ -64,10 +64,9 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
+                const Icon(
                   Icons.inbox_outlined,
                   size: 64,
-                  color: Theme.of(context).colorScheme.primary.withOpacity(0.6),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -111,16 +110,6 @@ class HomePage extends StatelessWidget {
   Container _infoCards(BuildContext context, ImmutableList<Post> posts) =>
       Container(
         padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.surface,
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.black12,
-              offset: Offset(0, 4),
-              blurRadius: 8,
-            ),
-          ],
-        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -178,8 +167,6 @@ class HomePage extends StatelessWidget {
         bottom: 16,
         child: FloatingActionButton(
           onPressed: () => unawaited(container<AppController>().refresh()),
-          backgroundColor: Theme.of(context).colorScheme.secondary,
-          foregroundColor: Theme.of(context).colorScheme.onSecondary,
           child: const Icon(Icons.refresh),
         ),
       );
