@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
           actions: [
             IconButton(
               icon: const Icon(Icons.info_outline),
-              tooltip: 'Learn more about SUDF',
+              tooltip: 'Learn more about Simplified Unidirectional Data Flow',
               onPressed: _launchWebsite,
               color: Theme.of(context).colorScheme.onPrimary,
             ),
@@ -183,7 +183,11 @@ class HomePage extends StatelessWidget {
 
   Future<void> _launchWebsite() async {
     const url = 'https://www.nimblesite.co/simplified-unidirectional-data-flow/';
-    if (!await launchUrl(Uri.parse(url))) {
+    final uri = Uri.parse(url);
+    if (!await launchUrl(
+      uri,
+      mode: LaunchMode.externalApplication,
+    )) {
       debugPrint('Could not launch $url');
     }
   }
